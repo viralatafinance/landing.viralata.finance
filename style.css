@@ -109,7 +109,7 @@ h1 {
 } .section02 {
     color: var(--c01);
     background-color: var(--c05);
-    background: linear-gradient(45deg, #a5a6a1, #F1EFE9 85%);
+    background: linear-gradient(-155deg, #b5c4cd, #e9edf1 85%);
     position: relative;
     box-shadow: 0 -1rem 7rem -4rem var(--c02);
 } .section03 {
@@ -178,15 +178,22 @@ h1 {
 .section02 p {
     font-weight: 900;
     padding: 0 1rem;
-    font-size: clamp(0.9rem, 4.4vw, 1.2rem);
+    font-size: clamp(0.8rem, 4.2vw, 1.2rem);
     margin: 0 auto 1rem auto;
     width: clamp(18rem, 90vw, 37rem);
     box-sizing: border-box;
-    line-height: 1.6rem;
+    line-height: clamp(1rem, 6.2vw, 1.8rem);
+    text-shadow: 0 0 1px transparent;
+    text-rendering: optimizeLegibility;
+    color: #222;
 } .section02 p:last-child {
     margin-bottom: 6rem;
 } .section02 p:first-of-type {
     margin-top: 6vw;
+} .section02 p b {
+    background: var(--c04);
+    padding: 0.1rem 0.4rem;
+    margin: 0 0.1rem;
 }
 
 h2 {
@@ -249,7 +256,7 @@ h2 {
 } input:hover {
     overflow: hidden;
 } input::placeholder {
-    font-size: clamp(0.7rem, 4vw, 1.4rem);
+    font-size: clamp(0.7rem, 5vw, 1.4rem);
     color: #37342F;
     transition: opacity 0.15s ease;
 } button {
@@ -451,7 +458,7 @@ h1 {
     }
     h4 {
         font-size: clamp(1.4rem, 1.7vw, 1.8rem);
-        width: clamp(23rem, 27vw, 28rem);
+        width: clamp(23rem, 28vw, 28rem);
     }
 
     .mobile_hidden h5 {
@@ -462,11 +469,12 @@ h1 {
     }
 
     .section02 p {
-        font-size: clamp(0.9rem, 4.4vw, 1rem);
+        font-size: clamp(0.9rem, 1vw, 1rem);
+        line-height: clamp(0.9rem, 4.4vw, 1.6rem);
         margin: 0 0 1rem 0;
-        width: clamp(11rem, 36vw, 26rem);
+        width: clamp(22rem, 36vw, 26rem);
         padding: 0;
-        text-rendering: optimizeLegibility;
+        letter-spacing: 1px;
     }
 
     #doggo01 {
@@ -487,10 +495,10 @@ h1 {
     }
 
     #rain_ctnr {
-        height: 80rem;
+        height: 110rem;
         width: 100%;
         position: relative;
-        top: -18rem;
+        top: -20rem;
         margin-bottom: -30rem;
         transform: none;
         right: 0;
@@ -511,10 +519,10 @@ h1 {
 
     .overflow01 {
         width: 100%;
-        height: 60rem;
+        height: 80rem;
         overflow: hidden;
         position: relative;
-        margin: -12rem 0 -22rem 0;
+        margin: -21rem 0 -25rem 0;
         right: -3rem;
     }
 }

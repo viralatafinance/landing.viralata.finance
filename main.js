@@ -55,13 +55,13 @@ const rain05 = document.querySelector('#rain_ctnr img:nth-child(5)')
 
 
 document.body.onscroll = function() {
-    rain01.style.transform = "translateY(" + (window.pageYOffset / 10) + "px)";
+    rain01.style.transform = "translateY(" + (window.pageYOffset / 6) + "px)";
     
-    rain02.style.transform = "translateY(" + (window.pageYOffset / 5) + "px)";
+    rain02.style.transform = "translateY(" + (window.pageYOffset / 3.8) + "px)";
     
     rain03.style.transform = "translateY(" + (window.pageYOffset / 4) + "px)";
     
-    rain04.style.transform = "translateY(" + (window.pageYOffset / 10) + "px)";
+    rain04.style.transform = "translateY(" + (window.pageYOffset / 16) + "px)";
     
-    rain05.style.transform = "translateY(" + (window.pageYOffset / 7) + "px)";
+    rain05.style.transform = "translateY(" + (window.pageYOffset / 8) + "px)";
 }
