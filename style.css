@@ -59,6 +59,7 @@ body {
     background-color:var(--c01);
     color: var(--c02);
     background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 .floating_form_ctnr {
@@ -69,6 +70,24 @@ body {
     z-index: 3;
     top: 8rem;
 }
+ 
+.form {
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} form span {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    background: linear-gradient(45deg, var(--c03) ,var(--c04));
+    padding: 0.2rem 0.8rem;
+    border-radius: 1.5rem;
+    color: var(--c01);
+    font-weight: 900;
+    font-size: 0.8rem;
+    transform: translateY(-50%);
+}
 
 img {
     max-width: 100%;
@@ -78,7 +97,7 @@ img {
 h1 {
     font-weight: 500;
     font-size: clamp(0.9rem, 5vw, 2.1rem);
-    margin: clamp(1rem, 20vw, 3.5rem) 0 1rem 0;
+    margin: clamp(1rem, 11vw, 9rem) 0 1rem 0;
     width: clamp(9rem, 50vw, 23rem);
 } b, strong {
     font-weight: 900;
@@ -91,9 +110,6 @@ h1 {
     color: var(--c01);
     background-color: var(--c05);
     background: linear-gradient(45deg, #a5a6a1, #F1EFE9 85%);
-    /* background-image: url('assets/texture01.jpg');
-    background-size: cover; */
-    padding: 0 6vw 3rem 6vw;
     position: relative;
     box-shadow: 0 -1rem 7rem -4rem var(--c02);
 } .section03 {
@@ -108,11 +124,11 @@ h1 {
 
 .cta01 {
     font-weight: 900;
-    font-size: clamp(0.9rem, 5vw, 2.4rem);
+    font-size: clamp(0.9rem, 5.5vw, 2.2rem);
 }
 
 .gradient_font {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     display: block;
     background: -webkit-linear-gradient(180deg, var(--c03) -20%, var(--c04) 110%);
     -webkit-background-clip: text;
@@ -134,7 +150,7 @@ h1 {
 }
 
 #doggo01 {
-    width: clamp(9rem, 55vw, 29rem);
+    width: clamp(9rem, 40vw, 29rem);
     margin: calc(0rem - 5vw) 0 0 0;
 }
 
@@ -144,9 +160,10 @@ h1 {
     background-color: var(--c01);
     border-radius: 0.3rem;
 } .video01 {
-    width: 100%;
+    width: clamp(10rem, 90vw, 39rem);
     margin: 25vw auto -25% auto;
     transform: translateY(-50%);
+    padding: 0 0rem;
 } .video02 {
     display:none;
 }
@@ -154,6 +171,8 @@ h1 {
 .bullets {
     width: clamp(14rem, 70vw, 20rem);
     margin: 0 auto clamp(1rem, 10vw, 2rem) auto;
+    z-index: 3;
+    filter: drop-shadow(0 0 2rem #F1EFE9);
 }
 
 .section02 p {
@@ -165,9 +184,9 @@ h1 {
     box-sizing: border-box;
     line-height: 1.6rem;
 } .section02 p:last-child {
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
 } .section02 p:first-of-type {
-    margin-top: 1rem;
+    margin-top: 6vw;
 }
 
 h2 {
@@ -175,11 +194,11 @@ h2 {
     font-size: clamp(1.9rem, 9vw, 2.8rem);
     width: clamp(16rem, 80vw, 60rem);
     margin: 0 auto 1rem auto;
-    padding-top: 3.5rem;
+    padding-top: 3rem;
 } h3 {
     font-weight: 900;
     margin: 0 auto 2rem auto;
-    font-size: clamp(0.9rem, calc(5vw - 0.2rem), 1.8rem);
+    font-size: clamp(0.9rem, calc(5vw - 0.2rem), 1.6rem);
     width: clamp(19rem, 90vw, 40rem);
 }
 
@@ -212,7 +231,7 @@ h2 {
     font-size: clamp(1.1rem, 1.3vw, 1.5rem);
     text-align: center;
     letter-spacing: clamp(0rem, 0.5vw, 0.4rem);
-    padding: 0 0 0.5rem 0;
+    padding: 0.3rem 0 0.6rem 0;
     border: none;
     font-family: 'Microgramma';
     font-weight: 900;
@@ -237,7 +256,6 @@ h2 {
     font-family: 'Microgramma';
     font-size: clamp(1.1rem, 5vw, 1.3rem);
     font-weight: 900;
-    margin: 0 0 1rem 0;
     transform: translateY(-50%);
     border-radius: 2rem;
     padding: 0.1rem 1.2rem;
@@ -292,6 +310,30 @@ h2 {
     /* background: var(--c01); */
   }
 
+  .overflow01 {
+    width: 100%;
+    height: 40rem;
+    overflow: hidden;
+    position: relative;
+    margin: -34rem 0 0rem;
+  }
+
+  #rain_ctnr {
+    width: 100%;
+    position: absolute;
+    right: calc(20rem - 60%);
+    transform: rotate(-90deg);
+    z-index: 2;
+    overflow: hidden;
+    height: clamp(20rem, 200vw, 60rem);
+    bottom: calc(1rem - 50vw);
+} #rain_ctnr img {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
 
 /* VERSÃO ALTERNATIVA */
 
@@ -342,6 +384,15 @@ h1 {
         background-size: cover;
     }
 
+    h1 {
+        margin: clamp(1rem, 11vw, 9rem) 0 1rem 0;
+        width: clamp(9rem, 41vw, 23rem);
+    }
+
+    .gradient_font {
+        margin-bottom: clamp(1rem, 20vw, 14rem);
+    }
+
     .flex01 {
         gap: 3vw;
         justify-content: center;
@@ -357,7 +408,7 @@ h1 {
     }
 
     .video01 {
-        width: clamp(11rem, 40vw, 26rem);
+        width: clamp(11rem, 36vw, 26rem);
         margin:0;
         transform:initial;
     } .video02 {
@@ -376,6 +427,8 @@ h1 {
     .flex01 > div {
         display:flex;
         flex-direction: column;
+        position: relative;
+        z-index: 4;
     }
 
     .mobile_hidden {
@@ -383,9 +436,8 @@ h1 {
     }
     
     .bullets {
-        margin: 1rem auto 0;
-        z-index: 2;
-        /* transition:transform 1s ease-in-out; */
+        margin: calc(8vw - 2rem) auto 0;
+        width: clamp(14rem, 35vw, 20rem);
     }
 
     ul {
@@ -398,8 +450,8 @@ h1 {
         font-size: clamp(3rem, 5vw, 4rem);
     }
     h4 {
-        font-size: clamp(1.3rem, calc(5vw - 1.5rem), 1.8rem);
-        width: clamp(1rem, 40vw, 28rem);
+        font-size: clamp(1.4rem, 1.7vw, 1.8rem);
+        width: clamp(23rem, 27vw, 28rem);
     }
 
     .mobile_hidden h5 {
@@ -412,13 +464,14 @@ h1 {
     .section02 p {
         font-size: clamp(0.9rem, 4.4vw, 1rem);
         margin: 0 0 1rem 0;
-        width: clamp(18rem, 40vw, 26rem);
+        width: clamp(11rem, 36vw, 26rem);
         padding: 0;
         text-rendering: optimizeLegibility;
     }
 
     #doggo01 {
-        margin: -3rem 0 -18rem 0;
+        margin: -2rem 0 -18rem 0;
+        width: clamp(24rem, 37vw, 29rem);
         z-index: 2;
     }
 
@@ -439,11 +492,29 @@ h1 {
         position: relative;
         top: -18rem;
         margin-bottom: -30rem;
+        transform: none;
+        right: 0;
     } #rain_ctnr img {
         height: 100%;
         position: absolute;
         left: 0;
         right: 0;
         margin: 0 auto;
+    }
+
+    .form {
+        position:relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .overflow01 {
+        width: 100%;
+        height: 60rem;
+        overflow: hidden;
+        position: relative;
+        margin: -12rem 0 -22rem 0;
+        right: -3rem;
     }
 }

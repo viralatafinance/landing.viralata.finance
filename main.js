@@ -53,22 +53,15 @@ const rain03 = document.querySelector('#rain_ctnr img:nth-child(3)')
 const rain04 = document.querySelector('#rain_ctnr img:nth-child(4)')
 const rain05 = document.querySelector('#rain_ctnr img:nth-child(5)')
 
-if (window.matchMedia("(min-width: 800px)").matches) {
-    document.body.onscroll = function() {
-        floatForm.style.transform = "translateY(" + window.pageYOffset / 1.05 + "px)";
-        
-        bullets.style.transform = "translateY(" + (window.pageYOffset / 10) + "px)";
-        
-        rain01.style.transform = "translateY(" + (window.pageYOffset / 10) + "px)";
-        
-        rain02.style.transform = "translateY(" + (window.pageYOffset / 5) + "px)";
-        
-        rain03.style.transform = "translateY(" + (window.pageYOffset/ 4) + "px)";
-        
-        rain04.style.transform = "translateY(" + (window.pageYOffset / 10) + "px)";
-        
-        rain05.style.transform = "translateY(" + (window.pageYOffset / 7) + "px)";
-    }
-    
 
+document.body.onscroll = function() {
+    rain01.style.transform = "translateY(" + (window.pageYOffset / 10) + "px)";
+    
+    rain02.style.transform = "translateY(" + (window.pageYOffset / 5) + "px)";
+    
+    rain03.style.transform = "translateY(" + (window.pageYOffset / 4) + "px)";
+    
+    rain04.style.transform = "translateY(" + (window.pageYOffset / 10) + "px)";
+    
+    rain05.style.transform = "translateY(" + (window.pageYOffset / 7) + "px)";
 }
