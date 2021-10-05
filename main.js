@@ -53,15 +53,43 @@ const rain03 = document.querySelector('#rain_ctnr img:nth-child(3)')
 const rain04 = document.querySelector('#rain_ctnr img:nth-child(4)')
 const rain05 = document.querySelector('#rain_ctnr img:nth-child(5)')
 
+let windowPosition;
+let videoPosition = document.querySelector('.video01').getBoundingClientRect().top;
+
+let videoPlaying = false;
 
 document.body.onscroll = function() {
-    rain01.style.transform = "translateY(" + (window.pageYOffset / 6) + "px)";
     
-    rain02.style.transform = "translateY(" + (window.pageYOffset / 3.8) + "px)";
+    let windowPosition = window.pageYOffset;
+
+    rain01.style.transform = "translateY(" + (windowPosition / 6) + "px)";
     
-    rain03.style.transform = "translateY(" + (window.pageYOffset / 4) + "px)";
+    rain02.style.transform = "translateY(" + (windowPosition / 3.8) + "px)";
     
-    rain04.style.transform = "translateY(" + (window.pageYOffset / 16) + "px)";
+    rain03.style.transform = "translateY(" + (windowPosition / 4) + "px)";
     
-    rain05.style.transform = "translateY(" + (window.pageYOffset / 8) + "px)";
+    rain04.style.transform = "translateY(" + (windowPosition / 16) + "px)";
+    
+    rain05.style.transform = "translateY(" + (windowPosition / 8) + "px)";
+
+
+    if(videoPlaying == false) {
+        if(window.matchMedia("(min-width: 800px)").matches) {
+    
+            if(window.pageYOffset > (videoPosition / 2)) {
+                
+                document.querySelector('.video01').play()
+                videoPlaying = true;
+            }
+        } else {
+            
+            if(window.pageYOffset > 1) {
+                document.querySelector('.video01').play()
+                videoPlaying = true;
+            }
+        }
+    }
+
+
+    
 }
