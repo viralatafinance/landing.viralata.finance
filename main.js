@@ -95,7 +95,7 @@ document.body.onscroll = function() {
 }
 
 
-const handleSubmit = (e) => {
+const handleSubmit01 = (e) => {
   e.preventDefault()
   let myForm = document.getElementById('top_form');
   let formData = new FormData(myForm)
@@ -107,8 +107,18 @@ const handleSubmit = (e) => {
     alert(error))
 }
 
-const forms = document.querySelectorAll("form");
-
-for(i = 0; i < forms.length; i++) {
-    forms[i].addEventListener("submit", handleSubmit);
+const handleSubmit02 = (e) => {
+  e.preventDefault()
+  let myForm = document.getElementById('bottom_form');
+  let formData = new FormData(myForm)
+  fetch('/', {
+    method: 'POST',
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString()
+  }).then(() => console.log('Form successfully submitted')).catch((error) =>
+    alert(error))
 }
+
+document.getElementById('top_form').addEventListener("submit", handleSubmit01);
+
+document.getElementById('bottom_form').addEventListener("submit", handleSubmit02);
