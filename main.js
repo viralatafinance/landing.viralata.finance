@@ -93,3 +93,35 @@ document.body.onscroll = function() {
 
     
 }
+
+function success() {
+    alert('NASDPIDSMAADSNJADSNOADS')
+}
+
+const handleSubmit01 = (e) => {
+  e.preventDefault()
+  let myForm = document.getElementById('top_form');
+  let formData = new FormData(myForm)
+  fetch('/', {
+    method: 'POST',
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString()
+  }).then(() => success()).catch((error) =>
+    alert(error))
+}
+
+const handleSubmit02 = (e) => {
+  e.preventDefault()
+  let myForm = document.getElementById('bottom_form');
+  let formData = new FormData(myForm)
+  fetch('/', {
+    method: 'POST',
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString()
+  }).then(() => success()).catch((error) =>
+    alert(error))
+}
+
+document.getElementById('top_form').addEventListener("submit", handleSubmit01);
+
+document.getElementById('bottom_form').addEventListener("submit", handleSubmit02);
