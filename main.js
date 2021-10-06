@@ -94,6 +94,9 @@ document.body.onscroll = function() {
     
 }
 
+function success() {
+    alert('NASDPIDSMAADSNJADSNOADS')
+}
 
 const handleSubmit01 = (e) => {
   e.preventDefault()
@@ -103,7 +106,7 @@ const handleSubmit01 = (e) => {
     method: 'POST',
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams(formData).toString()
-  }).then(() => console.log('Form successfully submitted')).catch((error) =>
+  }).then(() => success()).catch((error) =>
     alert(error))
 }
 
@@ -115,7 +118,7 @@ const handleSubmit02 = (e) => {
     method: 'POST',
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams(formData).toString()
-  }).then(() => console.log('Form successfully submitted')).catch((error) =>
+  }).then(() => success()).catch((error) =>
     alert(error))
 }
 
